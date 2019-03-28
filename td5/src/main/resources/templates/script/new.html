@@ -1,0 +1,47 @@
+{{ > header}}
+
+	<form method="POST" action="http://localhost:8081/script/createScript" class="ui fluid form">
+	
+		<fieldset>
+		<legend>Ajouter un script</legend>
+		
+		<div class="field">
+			<label for="title">Nom : </label>
+				<input type="text" name="title" id="title" />
+		</div>
+		
+		<div class="field">
+			<label for="description">Description : </label>
+				<input type="text" name="description" id="description" />
+		</div>
+		
+		<div class="field">
+			<label for="content">Contenu : </label>
+				<textarea name="content" id="content"></textarea>
+		</div>
+		
+		<div class="field">
+			<label for="creationDate">Date de création : </label>
+				<input type="text" name="creationDate" id="creationDate" />
+		</div>
+		
+		
+
+		
+		
+		
+		
+		<div class="ui segment">
+			<input type="submit" class="ui positive button" value="Ajouter" />
+			
+			
+		</div>
+		
+		
+		</fieldset>
+		<button class="ui negative button" href="http://localhost:8081/index" >Annuler</button>
+	</form>
+	
+	
+
+{{ > footer}}

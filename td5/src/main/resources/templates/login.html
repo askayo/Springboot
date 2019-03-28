@@ -1,20 +1,28 @@
-{{> header}}
-	<form class="ui form">
-	<h1 class="text-center">Page de login</h1>
-	  <div class="field">
-	    <label>Username</label>
-	    <input placeholder="Nom user" value="" type="text">
+{{>header}}
+<div class="ui container">
+	<div class="ui middle aligned center aligned grid">
+	  <div class="column">
+		<form class="ui large form" method="POST" action="http://127.0.0.1:8081/user/loguser">
+		      <div class="ui stacked segment">
+		        <div class="field">
+		          <div class="ui left icon input">
+		            <i class="user icon"></i>
+		            <input type="text" name="username" placeholder="Login">
+		          </div>
+		        </div>
+		        <div class="field">
+		          <div class="ui left icon input">
+		            <i class="lock icon"></i>
+		            <input type="password" name="mdp" placeholder="Password">
+		          </div>
+		        </div>
+		       		<input type="submit" class="ui green button" value="Login">
+		      </div>
+		
+		      <div class="ui error message"></div>
+		
+		 </form>
 	  </div>
-	  <div class="field">
-	    <label>Password</label>
-	    <input placeholder="Mot de passe" value="" type="text">
-	  </div>
-	  <div >
-		  <button class="ui button green" type="submit">Login</button>
-	  </div>
-
-	  
-	  
-	</form>
-
-	{{> footer}}
+	</div>	    
+   </div>
+{{>footer}}

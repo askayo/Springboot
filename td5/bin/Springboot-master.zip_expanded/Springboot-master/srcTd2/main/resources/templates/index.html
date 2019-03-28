@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion d'items</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+
+    <div class="ui container">
+	    <table class="ui basic table">
+	    <a href="createOrga">
+	    <button class="ui button" >Créer une organisation</button>
+	    </a>
+	  <thead>
+	    <tr>
+	      <th>Id</th>
+	      <th>Name</th>
+	      <th>Domain</th>
+	      <th>Aliases</th>
+	    </tr>
+	  </thead>
+	  
+	  <tbody>
+	 
+	    <tr>
+	     {{#orgas}} 
+	      <td>{{id}}</td>
+	      <td>{{name}}</td>
+	      <td>{{domain}}</td>
+	      <td>{{aliases}}</td>
+	      <td>
+		    <a href="/orgas/delete/{{id}}" class="negative circular ui icon button">
+	 			<i class="close icon"></i>
+			</a>
+		  
+		  	<a href="/orgas/edit/{{id}}" class="circular ui icon button">
+ 				 <i class="edit icon"></i>
+			</a>
+		  	
+		  	<a href="/orgas/view/{{id}}" class="circular ui icon button">
+ 				 <i class="eye icon"></i>
+			</a>
+		  
+			</td>
+		
+	    </tr>
+	  {{/orgas}}
+	    
+	  </tbody>
+	</table>
+    
+    </div>
+    
+ </body>
